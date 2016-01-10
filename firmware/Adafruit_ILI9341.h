@@ -18,15 +18,21 @@ MIT license, all text above must be included in any redistribution
 #define ADAFRUIT_ILI9341_H
 
 // Hack to get this to work in Spark IDE
-//Dehacked to try and get this work in the current Particle IDE
+// Rehacked to try and get this work in the current Particle IDE
 #include "../Adafruit_mfGFX/Adafruit_mfGFX.h"
 //#include "Adafruit_mfGFX.h"
 
 //#define pgm_read_byte(addr) (*(const unsigned char *)(addr))
 //#define pgm_read_word(addr) (*(const unsigned short *)(addr))
 
-//#define pinLO(_pin)	(PIN_MAP[_pin].gpio_peripheral->BRR = PIN_MAP[_pin].gpio_pin)
-//#define pinHI(_pin)	(PIN_MAP[_pin].gpio_peripheral->BSRR = PIN_MAP[_pin].gpio_pin)
+#if  (PLATFORM_ID) == 6
+#define pinLO(_pin) (PIN_MAP[_pin].gpio_peripheral->BSRRH = PIN_MAP[_pin].gpio_pin)
+#define pinHI(_pin) (PIN_MAP[_pin].gpio_peripheral->BSRRL = PIN_MAP[_pin].gpio_pin)
+#else
+#define pinLO(_pin)    (PIN_MAP[_pin].gpio_peripheral->BRR = PIN_MAP[_pin].gpio_pin)
+#define pinHI(_pin)    (PIN_MAP[_pin].gpio_peripheral->BSRR = PIN_MAP[_pin].gpio_pin)
+#endif
+
 //#define inline inline __attribute__((always_inline))
 
 //typedef unsigned char prog_uchar;

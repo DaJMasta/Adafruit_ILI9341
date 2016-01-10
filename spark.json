@@ -1,7 +1,7 @@
 {
-    "name": "Adafruit_ILI9341",
-    "version": "0.9.4",
-    "author": "Scott Piette <scott.piette@gmail.com>",
+    "name": "Adafruit_ILI9341_ParticleIDE",
+    "version": "0.9.5",
+    "author": "Scott Piette <scott.piette@gmail.com>, changed to work on new Particle IDE by DaJMasta",
     "license": "MIT license, Written by Limor Fried/Ladyada for Adafruit Industries",
     "description": "Library for Adafruit ILI9341 display products, use with Adafruid_mGFX library"
 }

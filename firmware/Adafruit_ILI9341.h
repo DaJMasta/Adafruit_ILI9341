@@ -25,6 +25,9 @@ MIT license, all text above must be included in any redistribution
 //#define pgm_read_byte(addr) (*(const unsigned char *)(addr))
 //#define pgm_read_word(addr) (*(const unsigned short *)(addr))
 
+//The else is author-original code, the if portion is a cut in fix to get it working on the newer particle IDE.
+//The original spliced code is from here: https://community.particle.io/t/touch-4wire-library-not-yet-ported-for-photon/12372
+
 #if  (PLATFORM_ID) == 6
 #define pinLO(_pin) (PIN_MAP[_pin].gpio_peripheral->BSRRH = PIN_MAP[_pin].gpio_pin)
 #define pinHI(_pin) (PIN_MAP[_pin].gpio_peripheral->BSRRL = PIN_MAP[_pin].gpio_pin)

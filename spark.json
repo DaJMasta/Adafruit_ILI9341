@@ -1,5 +1,5 @@
 {
-    "name": "Adafruit_ILI9341_ParticleIDE",
+    "name": "Adafruit_ILI9341",
     "version": "0.9.5",
     "author": "Scott Piette <scott.piette@gmail.com>, changed to work on new Particle IDE by DaJMasta",
     "license": "MIT license, Written by Limor Fried/Ladyada for Adafruit Industries",
